@@ -1,13 +1,12 @@
 const express = require('express');
 const { config } = require('./config/');
+const books = require('./routes/books');
 const app = express();
 
-app.get('/', (req, res) => {
-   res.json({
-      app: 'initizialice project',
-      message: 'index.js',
-   });
-});
+//It can undestand json
+app.use(express.json());
+//Uses routes of books
+books(app);
 
 app.listen(config.port, (err) => {
    if (err) console.log(err);

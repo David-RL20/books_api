@@ -7,7 +7,7 @@
 //GET "api/books/:id"    retornar la informacion del libro
 //POST "api/books/" 
     recibe:
-        name(obligatorio)
+        tittle(obligatorio)
         autor(obligatorio)
         releaseDate (d/m/a)(obligatorio)
         numPages (0 - 1000) --no obligatorio 
