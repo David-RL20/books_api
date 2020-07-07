@@ -2,11 +2,14 @@ const express = require("express");
 const { config } = require("./config/");
 const books = require("./routes/books");
 const authors = require("./routes/authors");
+const genres = require("./routes/genres");
 const app = express();
 
 //It can undestand json
 app.use(express.json());
-//
+
+//Genres
+genres(app);
 //Authors
 authors(app);
 //Books
